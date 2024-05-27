@@ -62,7 +62,7 @@ export class HomePage implements OnInit {
 
     // Mostrar la información (nombre y apellido) en un mensaje emergente
     const alert = await this.alertController.create({
-      header: 'Información',
+      header: 'Usuario',
       message: `Su nombre es: ${this.data.nombre} ${this.data.apellido}`,
       buttons: ['Cerrar']
     });
