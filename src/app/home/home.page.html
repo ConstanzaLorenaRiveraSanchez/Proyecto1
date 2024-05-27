@@ -4,22 +4,21 @@
   </ion-toolbar>
 </ion-header>
 
-
-  <ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true">
   <h1>Bienvenido!</h1>
   <div id="usuario">
-  <p>      Usuario: {{ usuario }}</p>
+    <p>Usuario: {{ usuario }}</p>
   </div>
 
   <div id="info-adicional">
     <h2>Información Adicional</h2>
     <ion-item class="ion-padding-horizontal">
       <ion-label position="stacked">Nombre</ion-label>
-      <ion-input type="text" [(ngModel)]="data.nombre"></ion-input>
+      <ion-input type="text" [(ngModel)]="data.nombre" class="slide-in"></ion-input>
     </ion-item>
     <ion-item class="ion-padding-horizontal">
       <ion-label position="stacked">Apellido</ion-label>
-      <ion-input type="text" [(ngModel)]="data.apellido"></ion-input>
+      <ion-input type="text" [(ngModel)]="data.apellido" class="slide-in"></ion-input>
     </ion-item>
     <ion-item class="ion-padding-horizontal">
       <ion-label position="stacked" class="ion-padding-bottom">Educación</ion-label>
