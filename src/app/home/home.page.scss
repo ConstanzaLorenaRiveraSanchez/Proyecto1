@@ -21,6 +21,7 @@ h1 {
 
 
 // Animación
+
 @keyframes slideIn {
   from {
     transform: translateX(-100%);
@@ -33,3 +34,4 @@ h1 {
 .slide-in {
   animation: slideIn 1s forwards;
 }
+
