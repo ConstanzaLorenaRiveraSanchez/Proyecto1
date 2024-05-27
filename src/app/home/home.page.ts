@@ -9,6 +9,7 @@ import { AlertController } from '@ionic/angular';
 })
 export class HomePage implements OnInit {
   usuario: string = ''; // Inicialización de la propiedad usuario
+  animarLimpiar: boolean = false; // Bandera para activar la animación
 
   data: {
     nombre: string,
@@ -34,11 +35,17 @@ export class HomePage implements OnInit {
   constructor(private route: ActivatedRoute, private alertController: AlertController) {}
 
   limpiar() {
-    // Limpiar los campos
-    this.data.nombre = '';
-    this.data.apellido = '';
-    this.data.education = '';
-    this.data.nacimiento = '';
+    // Activar la animación
+    this.animarLimpiar = true;
+
+    // Limpiar los campos después de 1 segundo
+    setTimeout(() => {
+      this.data.nombre = '';
+      this.data.apellido = '';
+      this.data.education = '';
+      this.data.nacimiento = '';
+      this.animarLimpiar = false; // Desactivar la animación
+    }, 1000);
   }
 
   async mostrar() {
