@@ -1,16 +1,24 @@
 #login {
-    margin: auto; /* Centra el login horizontalmente en la pantalla */
-    margin-top: 200px;
-    max-width: 400px; /* Establece el ancho máximo del login */
-    padding: 20px; /* Añade espacio alrededor del login */
-    border-radius: 10px; /* Agrega bordes redondeados al login */
+    margin: auto; 
+    margin-top: 100px;
+    max-width: 400px; 
+    padding: 20px; 
+    border-radius: 10px; 
   }
 
+#titulo{
+  margin-top: 20px;
+  text-align: center;
+}
+
+#titulo h1{
+  font-size: xx-large;
+}
 
 #texto-bienvenida {
     text-align: center;
     margin-top: 50px;
-    font-size: xx-large;
+    font-size: x-large;
 }
 
 
