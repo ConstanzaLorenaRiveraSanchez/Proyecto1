@@ -1,0 +1,20 @@
+
+<ion-content [fullscreen]="true">
+
+  <!-- Lista de ion-cards para mostrar los recordatorios -->
+  <ion-list>
+    <ion-card *ngFor="let recordatorio of recordatorios">
+      <ion-card-content>
+        {{ recordatorio }}
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <!-- Campo de entrada de texto para agregar un nuevo recordatorio -->
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="nuevoRecordatorio" placeholder="recordatorio"></ion-input>
+  </ion-item>
+
+  <!-- Botón para agregar un nuevo recordatorio -->
+  <ion-button expand="block" (click)="agregarRecordatorio()">Agregar Recordatorio</ion-button>
+</ion-content>
