@@ -1,55 +1,71 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Skeleton App</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
-  <h1>Bienvenido!</h1>
+
   <div id="usuario">
-    <p>Usuario: {{ usuario }}</p>
+    <h1>¡Hola! {{ usuario }} 👋</h1>
+    <h3>Bienvenidx a casa</h3>
   </div>
 
-  <div id="info-adicional">
-    <h2>Información Adicional</h2>
-    <ion-item class="ion-padding-horizontal">
-      <ion-label position="stacked">Nombre</ion-label>
-      <ion-input type="text" [(ngModel)]="data.nombre" class="slide-in"></ion-input>
-    </ion-item>
-    <ion-item class="ion-padding-horizontal">
-      <ion-label position="stacked">Apellido</ion-label>
-      <ion-input type="text" [(ngModel)]="data.apellido" class="slide-in"></ion-input>
-    </ion-item>
-    <ion-item class="ion-padding-horizontal">
-      <ion-label position="stacked" class="ion-padding-bottom">Educación</ion-label>
-      <ion-select placeholder="Seleccione nivel" [(ngModel)]="data.education">
-        <ion-select-option *ngFor="let niv of niveles" [value]="niv.id">{{niv.nivel}}</ion-select-option>
-      </ion-select>
-    </ion-item>
-    <ion-item class="ion-padding-horizontal">
-      <ion-label position="stacked">Fecha Nacimiento</ion-label>
-      
-      <mat-form-field>
-        <input matInput [matDatepicker]="picker" [(ngModel)]="data.nacimiento">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-      
-    </ion-item>
-    
-    <ion-grid>
-      <ion-row>
-        <ion-col col-6>
-          <ion-button shape="block" (click)="limpiar()">
-            Limpiar
-          </ion-button>
-        </ion-col>
-        <ion-col col-6>
-          <ion-button shape="block" (click)="mostrar()">
-            Mostrar
-          </ion-button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+  <div id="integrantes">
+    <ion-card>
+      <img alt="Lucas" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <ion-card-header>
+        <ion-card-title>Lucas</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <img alt="Emilio" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <ion-card-header>
+        <ion-card-title>Emilio</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <img alt="Javiera" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <ion-card-header>
+        <ion-card-title>Javiera</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <img alt="Susana" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <ion-card-header>
+        <ion-card-title>Susana</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
   </div>
+  <div class="registro">
+    <ion-button fill="clear" [routerLink]="['/registro']">Registrar Nuevo Integrante</ion-button>
+  </div>
+  
+  
+  <ion-tabs >
+
+    <ion-tab-bar slot="buttom">
+
+      <ion-tab-button tab="home">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="tareas">
+        <ion-icon name="clipboard-outline"></ion-icon>
+        <ion-label>Tareas</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="compras">
+        <ion-icon name="cart-outline"></ion-icon>        
+        <ion-label>Compras</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="recordatorios">
+        <ion-icon name="notifications-outline"></ion-icon>
+        <ion-label>Recordatorios</ion-label>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+
+  </ion-tabs>
+
+
+
 </ion-content>
