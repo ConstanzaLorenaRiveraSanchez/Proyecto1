@@ -1,11 +1,13 @@
 h1 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
-  color: #333333;
-  text-align: center;
+  text-align:center;
   margin-top: 50px;
 }
 
+h3 {
+  text-align: center;
+}
 
 #usuario{
   font-size: medium;
@@ -19,19 +21,16 @@ h1 {
   text-align: center;
 }
 
-
-// Animación
-
-@keyframes slideIn {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
+.registro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.slide-in {
-  animation: slideIn 1s forwards;
+
+ion-card {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
 }
 
