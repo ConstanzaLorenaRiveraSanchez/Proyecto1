@@ -1,0 +1,19 @@
+<h1>Tareas</h1>
+
+<ion-content [fullscreen]="true">
+  <!-- Lista para contener los elementos del checklist -->
+  <ion-list>
+    <ion-item *ngFor="let tarea of checklist" (ionChange)="marcarElemento(tarea)">
+      <ion-label>{{ tarea }}</ion-label>
+      <ion-checkbox slot="start"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <!-- Campo de entrada de texto para agregar un nuevo artículo con place holder-->
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="nuevoArticulo" placeholder="tarea"></ion-input>
+  </ion-item>
+  
+  <!-- Botón para agregar un nuevo elemento -->
+  <ion-button expand="block" (click)="agregarElemento()">Agregar Tarea</ion-button>
+</ion-content>
